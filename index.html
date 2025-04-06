@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignement two</title>
+    <style>
+        /* Basic CSS for better presentation */
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        form {
+            max-width: 500px;
+            margin: 20px 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Ordered List with Roman Numerals -->
+    <section>
+        <h2>Task List</h2>
+        <ol type="i">
+            <li>Design website structure</li>
+            <li>Implement HTML5 elements</li>
+            <li>Add form validation</li>
+            <li>Test multimedia elements</li>
+            <li>Deploy project</li>
+        </ol>
+    </section>
+
+    <!-- External Image from Pexels -->
+    <section>
+        <h2>Sample Image</h2>
+        <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+             alt="Nature Landscape" 
+             width="600" 
+             height="400">
+    </section>
+
+    <!-- Contacts Table -->
+    <section>
+        <h2>Contacts</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>123 Main St, City</td>
+                    <td>(123) 456-7890</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>456 Oak Ave, Town</td>
+                    <td>(234) 567-8901</td>
+                    <td>jane@example.com</td>
+                </tr>
+                <tr>
+                    <td>Michael Johnson</td>
+                    <td>789 Pine Rd, Village</td>
+                    <td>(345) 678-9012</td>
+                    <td>mike@example.com</td>
+                </tr>
+                <tr>
+                    <td>Sarah Williams</td>
+                    <td>321 Elm St, Hamlet</td>
+                    <td>(456) 789-0123</td>
+                    <td>sarah@example.com</td>
+                </tr>
+                <tr>
+                    <td>Robert Brown</td>
+                    <td>654 Birch Blvd, Suburb</td>
+                    <td>(567) 890-1234</td>
+                    <td>rob@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Registration Form -->
+    <section>
+        <h2>Registration Form</h2>
+        <form action="/submit" method="POST" novalidate>
+            <div class="form-group">
+                <label for="name">Name:*</label><br>
+                <input type="text" 
+                       id="name" 
+                       name="name" 
+                       placeholder="Enter your full name" 
+                       required 
+                       pattern="[A-Za-z\s]+" 
+                       title="Name should only contain letters and spaces">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:*</label><br>
+                <input type="email" 
+                       id="email" 
+                       name="email" 
+                       placeholder="example@domain.com" 
+                       required 
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                       title="Please enter a valid email address">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:*</label><br>
+                <input type="password" 
+                       id="password" 
+                       name="password" 
+                       placeholder="Enter password" 
+                       required 
+                       minlength="8" 
+                       title="Password must be at least 8 characters long">
+            </div>
+
+            <div class="form-group">
+                <label for="birthdate">Date of Birth:*</label><br>
+                <input type="date" 
+                       id="birthdate" 
+                       name="birthdate" 
+                       required 
+                       min="1900-01-01" 
+                       max="2023-12-31">
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country:*</label><br>
+                <select id="country" name="country" required>
+                    <option value="">Select a country</option>
+                    <option value="usa">Kenya</option>
+                    <option value="uk">Tanzania</option>
+                    <option value="canada">South Africa</option>
+                    <option value="australia">Uganda</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Gender:*</label><br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+
+            <div class="form-group">
+                <label>Interests:</label><br>
+                <input type="checkbox" id="sports" name="interests[]" value="sports">
+                <label for="sports">Sports</label>
+                <input type="checkbox" id="music" name="interests[]" value="music">
+                <label for="music">Music</label>
+                <input type="checkbox" id="travel" name="interests[]" value="travel">
+                <label for="travel">Travel</label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Multimedia Elements -->
+    <section>
+        <h2>Multimedia</h2>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <video controls width="600">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </section>
+</body>
+</html>
